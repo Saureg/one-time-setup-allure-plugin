@@ -1,14 +1,19 @@
 group 'ru.pravo.qa'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+apply plugin: 'java-library-distribution'
 
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    jcenter()
+}
+
+jar {
+    archiveName = 'one-time-setup-allure-plugin.jar'
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly('io.qameta.allure:allure-plugin-api:2.5.0'
+    )
 }

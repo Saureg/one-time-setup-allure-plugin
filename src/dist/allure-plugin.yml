@@ -1,2 +1,7 @@
 id: one-time-setup-plugin
 name: One Time Setup in Allure Report
+extensions:
+  - ru.pravo.qa.plugin.OneTimeSetupPlugin
+  - ru.pravo.qa.plugin.JacksonContext
+jsFiles:
+  - index.js
